@@ -24,6 +24,7 @@ public class Input {
 			this.emps[count++]=new Employee(empno, name, base, night, fam);
 			System.out.println("Again(Y/N)? : ");
 			y_n = this.sc.next();
+			this.sc.nextLine();//버퍼 날리기. 인트 다음에 스트링 나올때 버퍼 날리기. 다시 처음부터 다른사원 입력하니까. 
 		}while (y_n.equals("Y")||y_n.equals("y"));
 			return count;
 	}

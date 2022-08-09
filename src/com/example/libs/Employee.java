@@ -106,7 +106,7 @@ public class Employee {
 	@Override
 	public String toString() {
 		return String.format(
-				"%-5s %5s %5s %5d %10d %7d %7d %10d %10d",
+				"%-5s %5s %5s %5d %,10d %,7d %,7d %,10d %,10d", // %,넣어주면 3자리마다 , 찍어줌 
 				empno, name, dpart, base, hopay, fampay, nightpay, total, salay);
 	}// 변수 지정. 기본 생성자 만들고,  받는 변수 생성자 만들고 겟터셋터 셋팅하고  tostring 만듦 
 

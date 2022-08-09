@@ -18,16 +18,19 @@ public class Calc {
 			String empno = emp.getEmpno();// A522, A512 , C122
 			String dpart = this.getDpart(empno.charAt(0));
 			emp.setDpart(dpart); // 부서명 지정
-			// char code = empno.charAt(1); // 사원 번호 받아서 그 두번째 글자를 가져온다. 근데 숫자로 받아들임. 스트링으로
+			
+			
+			char code = empno.charAt(1); // 사원 번호 받아서 그 두번째 글자를 가져온다. 근데 숫자로 받아들임. 스트링으로
 			// 바꾸려면. 스트링이랑 더하기 해주면됨 ""+empno.charat(1) 해주면 공백이랑 더해져서 스트링이 됨
-			// int code = Integer.parseInt(String.valueOf(empno.charAt(1))); // 코드로 하는 방법도
+			 int codeint = Integer.parseInt(String.valueOf(empno.charAt(1))); // 코드로 하는 방법도
 			// 있음 api 가서 String클래스의 valueOf 사용
 			// 구지 두번 바꿔야하나?
-			int codeint = empno.charAt(1);// 사원번호에 2번째 글짜 따옴
+			//int codeint = empno.charAt(1);// 사원번호에 2번째 글짜 따옴
 			int hopay = this.getHopay(codeint);// 호급수당 지정
-
+			emp.setHopay(hopay);
+			
 			int nightpay = this.getNightpay(emp.getNight());// 바로넣기
-			emp.setNight(nightpay);// 야간수당 지정
+			emp.setNightpay(nightpay);// 야간수당 지정
 
 			int base = emp.getBase(); // 빼서 넣기
 			int basePay = this.getBase(base);
