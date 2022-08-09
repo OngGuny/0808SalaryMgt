@@ -2,9 +2,17 @@ package com.example.libs;
 
 public class Employee {
 	private String empno,name,dpart;
-	private int base, night, fam,hopay,fampay,nightpay,total,salay;
+	private int base, night, fam,hopay,fampay,nightpay,basepay,total,salay;
 	
 	public Employee() {// 기본 생성자 
+	}
+
+	public int getBasepay() {
+		return basepay;
+	}
+
+	public void setBasepay(int basepay) {
+		this.basepay = basepay;
 	}
 
 	public Employee(String empno, String name, int base, int night, int fam) {
